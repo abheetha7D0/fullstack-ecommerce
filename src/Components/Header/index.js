@@ -2,11 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 import CountryDropdown from '../CountryDropdown';
-import { IoSearch } from "react-icons/io5";
 import Button from '@mui/material/Button';
 import { CiUser } from "react-icons/ci";
 import { IoBagOutline } from "react-icons/io5";
-
+import SearchBox from "./SearchBox";
+import Navigation from "./Navigation";
 const Header = () => {
     return (
         <>
@@ -26,12 +26,8 @@ const Header = () => {
                             </div>
                             <div className="col-sm-10 d-flex align-items-center part2">
                                 <CountryDropdown />
-                                {/*Header Search Start Here*/}
-                                <div className="headerSearch ms-3 me-3 d-flex align-items-center">
-                                    <input type="text" placeholder="Search for products..." />
-                                    <Button className="ms-2"><IoSearch /></Button>
-                                </div>
-                                {/*Header Search End Here*/}
+
+                                <SearchBox />
 
                                 <div className="part3 d-flex align-items-center ms-auto">
                                     <Button className="circle me-3"><CiUser /></Button>
@@ -50,6 +46,9 @@ const Header = () => {
                     </div>
 
                 </header>
+
+                <Navigation />
+
             </div>
         </>
     )

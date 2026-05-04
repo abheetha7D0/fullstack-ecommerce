@@ -40,7 +40,7 @@ body {
     height: 50px;
     min-width: 170px;
     color:
-        #333d29 !important;
+        #936639 !important;
     border: 1px solid rgba(0, 0, 0, 2) !important;
     border-radius: 7px !important;
     padding: 10px 15px !important;
@@ -63,7 +63,7 @@ body {
     font-size: 14px !important;
     text-transform:
         capitalize !important;
-    color: #333d29 !important;
+    color: #936639 !important;
     font-weight: 700;
     line-height: 16px;
 }
@@ -100,7 +100,7 @@ header .headerSearch button {
     height: 45px !important;
     width: 45px !important;
     border-radius: 50% !important;
-    color: #333d29 !important;
+    color: #936639 !important;
 }
 
 header .headerSearch button svg {
@@ -115,7 +115,7 @@ header .part3 .circle{
     width: 45px !important;
     border-radius: 50px !important;
     border: 1px solid rgba(0, 0, 0, 1) !important;
-    color: #333d29;
+    color: #936639;
 }
 
 header .part3 .circle svg{
@@ -123,7 +123,8 @@ header .part3 .circle svg{
 }
 .cartTab .price{
     font-size: 18px;
-    color: rgba(0, 0, 0, 8);
+    margin-top: 10px;
+    color: #936639 !important;
     font-weight: 700;
     
 }
@@ -133,7 +134,7 @@ header .part3 .circle svg{
 
 }
 .cartTab button svg{
-    color: #f3611d !important;
+    color: #936639 !important;
     
 }
 
@@ -141,14 +142,57 @@ header .part3 .circle svg{
     position: absolute;
     top: -6px;
     right: -4px;
-    background: #f3611d;
+    background: #936639;
     border-radius: 50px;
     color: #fff;
     width: 20px;
     height: 20px;
 }
 
+nav .allCatTap{
+    background: #936639;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+nav .allCatTap *{
+    color: #fff !important;
+}
+nav .allCatTap:hover{
+    background: #936639;
+}
+nav .allCatTap .text{
+    font-weight: 600;
+}
+nav .allCatTap .icon1 svg{
+    font-size: 20px !important;
+}
+nav .allCatTap .icon2 svg{
+    font-size: 20px !important;
+}
+nav .navPart2 ul{
+    margin-bottom: 0px !important;
+}
+nav .navPart2 ul li a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 7);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    transition: all 0.2s ease-in-out;
+}
+nav .navPart2 ul li a svg{
+    font-size: 16px;
+    margin-right: 2px;
+}
 
+nav .navPart2 ul li a:hover{
+    background: #f3f4f6;
+    color: #936639;
+    transform: translateY(-2px);
+}
 :root {
     --primary: #2563eb;
     --primary-dark: #1e40af;
