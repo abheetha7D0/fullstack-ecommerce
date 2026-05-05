@@ -39,8 +39,9 @@ body {
 ::-webkit-scrollbar-track {
     background: transparent !important;
 }
+
 .headerWrapper {
-   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .headerWrapper .top-strip {
@@ -133,6 +134,15 @@ body {
     background: #f3f4f6 !important;
 }
 
+nav .navPart1 {
+    max-width: 20%;
+    flex: 0 0 20%;
+}
+
+nav .navPart2 {
+    max-width: 80%;
+    flex: 0 0 80%;
+}
 
 .locationModal .closeBtn {
     position: absolute;
@@ -144,6 +154,7 @@ body {
     min-width: 40px !important;
     border-radius: 50% !important;
 }
+
 .locationModal .closeBtn svg {
     font-size: 30px;
 }
@@ -153,7 +164,6 @@ body {
     height: 50px;
     background: #f3f4f6;
     position: relative;
-    border-radius: 5px;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 1);
@@ -226,7 +236,8 @@ body {
     width: 20px;
     height: 20px;
 }
-nav{
+
+nav {
     margin-top: 10px;
 }
 
@@ -259,11 +270,16 @@ nav .allCatTab .icon2 svg {
 nav .navPart2 ul {
     margin-bottom: 0px !important;
 }
-nav .navPart2 ul li a{
+
+nav .navPart2 ul li {
+    margin-right: 5px;
+}
+
+nav .navPart2 ul li a {
     text-decoration: none;
 }
 
-nav .navPart2 ul li a button{
+nav .navPart2 ul li a button {
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -288,10 +304,11 @@ nav .navPart2 ul li a:hover {
     transform: translateY(-2px);
 }
 
-nav .navPart2 ul li{
+nav .navPart2 ul li {
     position: relative;
     padding-bottom: 20px;
 }
+
 nav .navPart2 ul li .subMenu {
     position: absolute;
     top: 100%;
@@ -303,36 +320,70 @@ nav .navPart2 ul li .subMenu {
     visibility: hidden;
     transition: all 0.2s ease-in-out;
 }
-nav .navPart2 ul li .subMenu a{
+
+nav .navPart2 ul li .subMenu a {
     display: block;
     width: 100% !important;
 
 }
-nav .navPart2 ul li .subMenu a button{
+
+nav .navPart2 ul li .subMenu a button {
     width: 100% !important;
     padding: 10px 15px !important;
     border-radius: 0px !important;
     color: #936639 !important;
     font-weight: 500;
 }
+
 nav .navPart2 ul li:hover .subMenu {
     opacity: 1;
     visibility: visible;
     top: 100%;
 }
+
 nav .navPart2 ul li .subMenu a button:hover {
     background: #f3f4f6 !important;
 }
-:root {
-    --primary: #2563eb;
-    --primary-dark: #1e40af;
-    --accent: #f59e0b;
 
-    --bg: #f9fafb;
-    --card: #ffffff;
+nav .navPart1 .catWrapper {
+    position: relative;
+}
 
-    --text: #111827;
-    --text-light: #6b7280;
-
-    --border: #e5e7eb;
+nav .navPart1 .catWrapper .sideBarNav {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background: #fff;
+    top: 145%;
+    left: 0px;
+    padding: 15px 0px !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+nav .navPart1 .catWrapper .sideBarNav.open {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+nav .navPart1 .catWrapper .sideBarNav ul{
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+}
+nav .navPart1 .catWrapper .sideBarNav ul li{
+    width: 100%;
+    list-style: none;
+    padding: 0px 15px !important;
+}
+nav .navPart1 .catWrapper .sideBarNav ul li button{
+    width: 100%;
+    text-transform: capitalize !important;
+    color: #936639 !important;
+    justify-content: flex-start;
+}
+nav .navPart1 .catWrapper .sideBarNav ul li button:hover{
+    background: #f3f4f6 !important;
+    
 }

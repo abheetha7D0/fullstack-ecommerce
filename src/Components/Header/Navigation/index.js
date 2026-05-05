@@ -9,23 +9,45 @@ import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaRegNewspaper } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
+import { useState } from "react";
+
 
 const Navigation = () => {
+
+    const [isOpenSideBar, setIsOpenSideBar] = useState(true);
+
     return (
         <nav>
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-3 navPart1">
-                        <Button className="allCatTab align-items-center">
-                            <span className="icon1 me-2">
-                                <IoMenu />
-                            </span>
-                            <span className="text">All Categories</span>
+                    <div className="col-sm-2 navPart1">
+                        <div className="catWrapper">
+                            <Button
+                                className="allCatTab align-items-center"
+                                onClick={()=>setIsOpenSideBar(!isOpenSideBar)}
+                            >
+                                <span className="icon1 me-2">
+                                    <IoMenu />
+                                </span>
+                                <span className="text">All Categories</span>
 
-                            <span className="icon2 ms-2">
-                                <FaAngleDown />
-                            </span>
-                        </Button>
+                                <span className="icon2 ms-2">
+                                    <FaAngleDown />
+                                </span>
+                            </Button>
+                            <div className={`sideBarNav shadow ${isOpenSideBar ? "open" : ""}`}>
+                                <ul>
+                                    <li><Link to="/"><Button>Mens</Button></Link></li>
+                                    <li><Link to="/"><Button>Womens</Button></Link></li>
+                                    <li><Link to="/"><Button>Kids</Button></Link></li>
+                                    <li><Link to="/"><Button>Accessories</Button></Link></li>
+                                    <li><Link to="/"><Button>Beauty</Button></Link></li>
+                                    <li><Link to="/"><Button>Sports</Button></Link></li>
+                                    <li><Link to="/"><Button>Gift</Button></Link></li>
+                               </ul>
+                            </div>
+                        </div>
+
                     </div>
                     <div className="col-sm-9 navPart2 d-flex align-items-center">
                         <ul className="list list-inline ms-auto">
