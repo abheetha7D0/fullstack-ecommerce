@@ -40,6 +40,11 @@ const CountryDropdown = () => {
     setFilteredList(list);
   };
 
+  const openModal = (e) => {
+    e.currentTarget.blur();
+    setIsOpenModal(true);
+  };
+
   const selectCountry = (country) => {
     setSelectedCountry(country);
     setIsOpenModal(false);
@@ -53,7 +58,7 @@ const CountryDropdown = () => {
 
   return (
     <>
-      <Button className="countryDrop d-flex align-items-center " onClick={() => setIsOpenModal(true)}>
+      <Button className="countryDrop d-flex align-items-center " onClick={openModal}>
 
         <div className="info d-flex flex-column text-start">
           <span className="label">Your Location</span>
@@ -68,7 +73,7 @@ const CountryDropdown = () => {
 
       </Button>
       <Dialog open={isOpenModal} onClose={() => setIsOpenModal(false)} className="locationModal"
-        TransitionComponent={Transition}>
+        TransitionComponent={Transition} disableEnforceFocus>
         <h4 className="mb-0">Select your location</h4>
         <p>Enter your address  and we will show you the best options for your area.</p>
         <Button className="closeBtn" onClick={() => setIsOpenModal(false)}>

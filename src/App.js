@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import { useState, useEffect } from "react";
@@ -20,7 +20,6 @@ function App() {
   const getCountry = async (url) => {
     try {
       const response = await axios.get(url);
-      {/*console.log(response.data[0].name.common);*/}
       setCountryList(response.data);
 
     } catch (error) {
