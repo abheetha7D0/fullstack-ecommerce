@@ -39,6 +39,10 @@ body {
 ::-webkit-scrollbar-track {
     background: transparent !important;
 }
+.headerWrapper {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+   padding-bottom: 10px !important;
+}
 
 .headerWrapper .top-strip {
     padding: 8px 0px;

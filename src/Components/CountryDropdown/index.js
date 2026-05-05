@@ -63,7 +63,7 @@ const CountryDropdown = () => {
         <div className="info d-flex flex-column text-start">
           <span className="label">Your Location</span>
           <span className="name">
-            {selectedCountry ? selectedCountry.name.common : "Sri Lanka"}
+            {selectedCountry ? selectedCountry.name.common.substring(0, 10) + "..." : "Select location"}
           </span>
         </div>
 
