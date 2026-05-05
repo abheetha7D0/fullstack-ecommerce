@@ -38,7 +38,6 @@ const Navigation = () => {
                                     <Link to="/"><Button>Womens</Button></Link>
                                     <Link to="/"><Button>Kids</Button></Link>
                                     <Link to="/"><Button>Accessories</Button></Link>
-                                    <Link to="/"><Button>Service</Button></Link>
                                 </div>
 
                             </li>
