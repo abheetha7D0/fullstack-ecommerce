@@ -1,8 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import Button from '@mui/material/Button';
-import "bootstrap/dist/css/bootstrap.min.css";
-import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from "@mui/material/Dialog";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { IoSearch } from "react-icons/io5";
@@ -21,7 +19,37 @@ const CountryDropdown = () => {
 
   const [isOpenModal, setIsOpenModal] = useState(false);
 
+  const [selectedCountry, setSelectedCountry] = useState(null);
+
   const context = useContext(MyContext);
+
+  const [filteredList, setFilteredList] = useState([]);
+
+  const filterList = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+
+    if (!searchTerm) {
+      setFilteredList(context?.countryList || []);
+      return;
+    }
+
+    const list = (context?.countryList || []).filter((item) =>
+      item.name.common.toLowerCase().includes(searchTerm)
+    );
+
+    setFilteredList(list);
+  };
+
+  const selectCountry = (country) => {
+    setSelectedCountry(country);
+    setIsOpenModal(false);
+  }
+
+  useEffect(() => {
+    if (isOpenModal) {
+      setFilteredList(context?.countryList || []);
+    }
+  }, [isOpenModal, context?.countryList]);
 
   return (
     <>
@@ -29,7 +57,9 @@ const CountryDropdown = () => {
 
         <div className="info d-flex flex-column text-start">
           <span className="label">Your Location</span>
-          <span className="name">Sri Lanka</span>
+          <span className="name">
+            {selectedCountry ? selectedCountry.name.common : "Sri Lanka"}
+          </span>
         </div>
 
         <span className="angleDown ms-auto">
@@ -45,16 +75,26 @@ const CountryDropdown = () => {
           <IoClose />
         </Button>
         <div className="headerSearch w-100">
-          <input type="text" placeholder="Search your location" />
+          <input type="text" placeholder="Search your location" onChange={filterList} />
           <Button className="ms-2"><IoSearch /></Button>
         </div>
         <ul className="countryList mt-3">
-          {
-            context.countryList?.length > 0 && context.countryList.map((item) => {
-              return <li><Button onClick={() => setIsOpenModal(false)}>{item.name.common}</Button></li>
-            })}
-          
-
+          {filteredList?.length > 0 &&
+            filteredList.map((item) => (
+              <li key={item.cca3 || item.name.common}>
+                <Button
+                  onClick={() => selectCountry(item)}
+                  className={
+                    selectedCountry?.name?.common === item.name.common
+                      ? "active"
+                      : ""
+                  }
+                >
+                  {item.name.common}
+                </Button>
+              </li>
+            ))
+          }
         </ul>
       </Dialog>
     </>
