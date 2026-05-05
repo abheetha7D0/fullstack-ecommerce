@@ -214,6 +214,9 @@ body {
     width: 20px;
     height: 20px;
 }
+nav{
+    margin-top: 10px;
+}
 
 nav .allCatTab {
     background: #936639;
@@ -244,17 +247,22 @@ nav .allCatTab .icon2 svg {
 nav .navPart2 ul {
     margin-bottom: 0px !important;
 }
+nav .navPart2 ul li a{
+    text-decoration: none;
+}
 
-nav .navPart2 ul li a {
-    font-size: 16px;
+nav .navPart2 ul li a button{
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
     color: rgba(0, 0, 0, 7);
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    padding: 10px 50px;
+    padding: 8px 50px;
     transition: all 0.2s ease-in-out;
+    border-radius: 25px;
+    color: #936639 !important;
 }
 
 nav .navPart2 ul li a svg {

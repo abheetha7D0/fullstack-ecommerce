@@ -28,11 +28,11 @@ const Navigation = () => {
                     </div>
                     <div className="col-sm-9 navPart2 d-felex align-items-center">
                         <ul className="list list-inline ms-auto">
-                            <li className="list-inline-item"><Link to="/"><IoHomeOutline /> &nbsp; Home</Link></li>
-                            <li className="list-inline-item"><Link to="/shop"><FiShoppingCart /> &nbsp; Shop</Link></li>
-                            <li className="list-inline-item"><Link to="/contact"> <AiOutlineInfoCircle /> &nbsp;About</Link></li>
-                            <li className="list-inline-item"><Link to="/about"><FaRegNewspaper /> &nbsp;Blog</Link></li>
-                            <li className="list-inline-item"><Link to="/contact"><RiContactsLine />&nbsp;Contact</Link></li>
+                            <li className="list-inline-item"><Link to="/"><Button><IoHomeOutline /> &nbsp; Home</Button></Link></li>
+                            <li className="list-inline-item"><Link to="/shop"><Button><FiShoppingCart /> &nbsp; Shop</Button></Link></li>
+                            <li className="list-inline-item"><Link to="/contact"> <Button><AiOutlineInfoCircle /> &nbsp;About</Button></Link></li>
+                            <li className="list-inline-item"><Link to="/about"><Button><FaRegNewspaper /> &nbsp;Blog</Button></Link></li>
+                            <li className="list-inline-item"><Link to="/contact"><Button><RiContactsLine />&nbsp;Contact</Button></Link></li>
                         </ul>
                     </div>
 
