@@ -15,7 +15,7 @@ const Navigation = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-3 navPart1">
-                        <Button className="allCatTap align-items-center">
+                        <Button className="allCatTab align-items-center">
                             <span className="icon1 me-2">
                                 <IoMenu />
                             </span>
