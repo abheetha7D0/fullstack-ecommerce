@@ -8,6 +8,7 @@ import { RiContactsLine } from "react-icons/ri";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaRegNewspaper } from "react-icons/fa";
+import { FiSettings } from "react-icons/fi";
 
 const Navigation = () => {
     return (
@@ -26,12 +27,23 @@ const Navigation = () => {
                             </span>
                         </Button>
                     </div>
-                    <div className="col-sm-9 navPart2 d-felex align-items-center">
+                    <div className="col-sm-9 navPart2 d-flex align-items-center">
                         <ul className="list list-inline ms-auto">
                             <li className="list-inline-item"><Link to="/"><Button><IoHomeOutline /> &nbsp; Home</Button></Link></li>
-                            <li className="list-inline-item"><Link to="/shop"><Button><FiShoppingCart /> &nbsp; Shop</Button></Link></li>
-                            <li className="list-inline-item"><Link to="/contact"> <Button><AiOutlineInfoCircle /> &nbsp;About</Button></Link></li>
-                            <li className="list-inline-item"><Link to="/about"><Button><FaRegNewspaper /> &nbsp;Blog</Button></Link></li>
+                            <li className="list-inline-item"><Link to="/about"> <Button><AiOutlineInfoCircle /> &nbsp;About</Button></Link></li>
+                            <li className="list-inline-item">
+                                <Link to="/shop"><Button><FiShoppingCart /> &nbsp; Shop</Button></Link>
+                                <div className="subMenu shadow">
+                                    <Link to="/"><Button>Mens</Button></Link>
+                                    <Link to="/"><Button>Womens</Button></Link>
+                                    <Link to="/"><Button>Kids</Button></Link>
+                                    <Link to="/"><Button>Accessories</Button></Link>
+                                    <Link to="/"><Button>Service</Button></Link>
+                                </div>
+
+                            </li>
+                            <li className="list-inline-item"><Link to="/blog"><Button><FiSettings /> &nbsp; Service</Button></Link></li>
+                            <li className="list-inline-item"><Link to="/blog"><Button><FaRegNewspaper /> &nbsp;Blog</Button></Link></li>
                             <li className="list-inline-item"><Link to="/contact"><Button><RiContactsLine />&nbsp;Contact</Button></Link></li>
                         </ul>
                     </div>

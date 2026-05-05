@@ -55,6 +55,10 @@ const CountryDropdown = () => {
       setFilteredList(context?.countryList || []);
     }
   }, [isOpenModal, context?.countryList]);
+  const name = selectedCountry?.name?.common || "Select location";
+
+  const displayName =
+    name.length > 15 ? name.substring(0, 15) + "..." : name;
 
   return (
     <>
@@ -62,9 +66,8 @@ const CountryDropdown = () => {
 
         <div className="info d-flex flex-column text-start">
           <span className="label">Your Location</span>
-          <span className="name">
-            {selectedCountry ? selectedCountry.name.common.substring(0, 10) + "..." : "Select location"}
-          </span>
+
+          <span className="name">{displayName}</span>
         </div>
 
         <span className="angleDown ms-auto">

@@ -41,7 +41,6 @@ body {
 }
 .headerWrapper {
    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-   padding-bottom: 10px !important;
 }
 
 .headerWrapper .top-strip {
@@ -272,7 +271,7 @@ nav .navPart2 ul li a button{
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    padding: 8px 50px;
+    padding: 8px 35px;
     transition: all 0.2s ease-in-out;
     border-radius: 25px;
     color: #936639 !important;
@@ -289,6 +288,41 @@ nav .navPart2 ul li a:hover {
     transform: translateY(-2px);
 }
 
+nav .navPart2 ul li{
+    position: relative;
+    padding-bottom: 20px;
+}
+nav .navPart2 ul li .subMenu {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    min-width: 150px;
+    background: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+nav .navPart2 ul li .subMenu a{
+    display: block;
+    width: 100% !important;
+
+}
+nav .navPart2 ul li .subMenu a button{
+    width: 100% !important;
+    padding: 10px 15px !important;
+    border-radius: 0px !important;
+    color: #936639 !important;
+    font-weight: 500;
+}
+nav .navPart2 ul li:hover .subMenu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+nav .navPart2 ul li .subMenu a button:hover {
+    background: #f3f4f6 !important;
+}
 :root {
     --primary: #2563eb;
     --primary-dark: #1e40af;
