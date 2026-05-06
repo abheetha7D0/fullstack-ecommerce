@@ -323,6 +323,7 @@ nav .navPart2 ul li .subMenu {
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease-in-out;
+    z-index: 100;
 }
 
 nav .navPart2 ul li .subMenu a {
@@ -358,12 +359,13 @@ nav .navPart1 .catWrapper .sideBarNav {
     height: auto;
     position: absolute;
     background: #fff;
-    top: 145%;
+    top: 140%;
     left: 0px;
     padding: 15px 0px !important;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease-in-out;
+    z-index: 100;
 }
 nav .navPart1 .catWrapper .sideBarNav.open {
     height: auto;
@@ -390,4 +392,46 @@ nav .navPart1 .catWrapper .sideBarNav ul li button{
 nav .navPart1 .catWrapper .sideBarNav ul li button:hover{
     background: #f3f4f6 !important;
     
+}
+.homeBannerSection *{
+    outline: none !important;
+}
+.homeBannerSection {
+    position: relative;
+    overflow: hidden;
+}
+.homeBannerSection img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover; 
+}
+.homeBannerSection .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px !important;
+    background: #936639 !important;
+    border-radius: 100% !important;
+    font-family: FontAwesome !important;
+    font-weight: bold !important;
+}
+.homeBannerSection .slick-arrow.slick-next{
+    right: 25px;
+}
+.homeBannerSection .slick-arrow.slick-prev{
+    left: 25px;
+}
+.homeBannerSection .slick-arrow.slick-next::before{
+    
+    color: #fff !important;
+    font-family: FontAwesome !important;
+}
+.homeBannerSection .slick-arrow.slick-prev::before{
+    
+    color: #fff !important;
+    font-family: FontAwesome !important;
 }

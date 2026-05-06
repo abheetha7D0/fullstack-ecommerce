@@ -14,7 +14,7 @@ import { useState } from "react";
 
 const Navigation = () => {
 
-    const [isOpenSideBar, setIsOpenSideBar] = useState(true);
+    const [isOpenSideBar, setIsOpenSideBar] = useState(false);
 
     return (
         <nav>
