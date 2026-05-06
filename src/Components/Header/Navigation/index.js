@@ -10,7 +10,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaRegNewspaper } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { useState } from "react";
-
+import { FaAngleRight } from "react-icons/fa6";
 
 const Navigation = () => {
 
@@ -24,7 +24,7 @@ const Navigation = () => {
                         <div className="catWrapper">
                             <Button
                                 className="allCatTab align-items-center"
-                                onClick={()=>setIsOpenSideBar(!isOpenSideBar)}
+                                onClick={() => setIsOpenSideBar(!isOpenSideBar)}
                             >
                                 <span className="icon1 me-2">
                                     <IoMenu />
@@ -37,14 +37,38 @@ const Navigation = () => {
                             </Button>
                             <div className={`sideBarNav shadow ${isOpenSideBar ? "open" : ""}`}>
                                 <ul>
-                                    <li><Link to="/"><Button>Mens</Button></Link></li>
-                                    <li><Link to="/"><Button>Womens</Button></Link></li>
-                                    <li><Link to="/"><Button>Kids</Button></Link></li>
-                                    <li><Link to="/"><Button>Accessories</Button></Link></li>
-                                    <li><Link to="/"><Button>Beauty</Button></Link></li>
+                                    <li><Link to="/"><Button>Men<FaAngleRight className="ms-auto"/></Button></Link>
+                                        <div className="subMenu shadow">
+                                            <Link to="/"><Button>Clothing</Button></Link>
+                                            <Link to="/"><Button>Shoes</Button></Link>
+                                            <Link to="/"><Button>Footwear</Button></Link>
+                                            <Link to="/"><Button>Accessories</Button></Link>
+                                            <Link to="/"><Button>Watches</Button></Link>
+                                        </div>
+                                    </li>
+                                    <li><Link to="/"><Button>Women<FaAngleRight className="ms-auto"/></Button></Link>
+                                    <div className="subMenu shadow">
+                                            <Link to="/"><Button>Clothing</Button></Link>
+                                            <Link to="/"><Button>Shoes</Button></Link>
+                                            <Link to="/"><Button>Footwear</Button></Link>
+                                            <Link to="/"><Button>Accessories</Button></Link>
+                                            <Link to="/"><Button>Watches</Button></Link>
+                                            <Link to="/"><Button>Beauty</Button></Link>
+                                        </div>
+                                    </li>
+                                    <li><Link to="/"><Button>Kid<FaAngleRight className="ms-auto"/></Button></Link>
+                                    <div className="subMenu shadow">
+                                            <Link to="/"><Button>Clothing</Button></Link>
+                                            <Link to="/"><Button>Shoes</Button></Link>
+                                            <Link to="/"><Button>Footwear</Button></Link>
+                                            <Link to="/"><Button>Accessories</Button></Link>
+                                            <Link to="/"><Button>Watches</Button></Link>
+                                        </div>
+                                    </li>
+                                    <li><Link to="/"><Button>All Accessories</Button></Link></li>
                                     <li><Link to="/"><Button>Sports</Button></Link></li>
                                     <li><Link to="/"><Button>Gift</Button></Link></li>
-                               </ul>
+                                </ul>
                             </div>
                         </div>
 

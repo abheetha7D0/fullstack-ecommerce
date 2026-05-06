@@ -12,7 +12,7 @@ const HomeBanner = () => {
         speed: 600,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,        
+        autoplay: true,
         autoplaySpeed: 3000,
         arrows: true,
     };
@@ -21,15 +21,14 @@ const HomeBanner = () => {
         <div className="homeBannerSection">
             <Slider {...settings}>
                 <div className="item">
-                    <img src={banner1} className="w-100" />
+                    <img src={banner1} alt="Banner 1" className="w-100" />
                 </div>
                 <div className="item">
-                    <img src={banner2} className="w-100" />
+                    <img src={banner2} alt="Banner 2" className="w-100" />
                 </div>
                 <div className="item">
-                    <img src={banner3} className="w-100" />
+                    <img src={banner3} alt="Women holding a ATM card" className="w-100" />
                 </div>
-
             </Slider>
         </div>
     )

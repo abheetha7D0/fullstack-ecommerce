@@ -5,10 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
-
-
 body {
     font-family: "Lato", sans-serif;
     font-size: 14px;
@@ -367,45 +363,82 @@ nav .navPart1 .catWrapper .sideBarNav {
     transition: all 0.2s ease-in-out;
     z-index: 100;
 }
+
 nav .navPart1 .catWrapper .sideBarNav.open {
     height: auto;
     opacity: 1;
     visibility: visible;
 }
-nav .navPart1 .catWrapper .sideBarNav ul{
+
+nav .navPart1 .catWrapper .sideBarNav ul {
     padding-left: 0px !important;
     margin-bottom: 0px !important;
     overflow-y: scroll !important;
     overflow-x: hidden !important;
 }
-nav .navPart1 .catWrapper .sideBarNav ul li{
+
+nav .navPart1 .catWrapper .sideBarNav ul li {
     width: 100%;
     list-style: none;
-    padding: 0px 15px !important;
+    padding: 0px 10px !important;
 }
-nav .navPart1 .catWrapper .sideBarNav ul li button{
+
+nav .navPart1 .catWrapper .sideBarNav ul li button {
     width: 100%;
     text-transform: capitalize !important;
     color: #936639 !important;
     justify-content: flex-start;
 }
-nav .navPart1 .catWrapper .sideBarNav ul li button:hover{
+
+nav .navPart1 .catWrapper .sideBarNav ul li button:hover {
     background: #f3f4f6 !important;
-    
+
 }
-.homeBannerSection *{
+
+nav .navPart1 .catWrapper .sideBarNav ul li {
+    position: static;
+}
+
+nav .navPart1 .catWrapper .sideBarNav ul li .subMenu {
+    position: absolute;
+    top: 0px;
+    left: 105%;
+    min-width: 250px;
+    background: #fff;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+   
+}
+nav .navPart1 .catWrapper .sideBarNav ul li button svg {
+    font-size: 16px;
+    opacity: 0.7;
+}
+nav .navPart1 .catWrapper .sideBarNav ul li:hover .subMenu {
+    opacity: 1;
+    visibility: inherit;
+    left: 100%;
+
+}
+
+.homeBannerSection * {
     outline: none !important;
 }
+
 .homeBannerSection {
     position: relative;
     overflow: hidden;
 }
+
 .homeBannerSection img {
     height: 400px;
     width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
-.homeBannerSection .slick-arrow{
+
+.homeBannerSection .slick-arrow {
     position: absolute;
     top: 50%;
     z-index: 100;
@@ -419,19 +452,23 @@ nav .navPart1 .catWrapper .sideBarNav ul li button:hover{
     font-family: FontAwesome !important;
     font-weight: bold !important;
 }
-.homeBannerSection .slick-arrow.slick-next{
+
+.homeBannerSection .slick-arrow.slick-next {
     right: 25px;
 }
-.homeBannerSection .slick-arrow.slick-prev{
+
+.homeBannerSection .slick-arrow.slick-prev {
     left: 25px;
 }
-.homeBannerSection .slick-arrow.slick-next::before{
-    
+
+.homeBannerSection .slick-arrow.slick-next::before {
+
     color: #fff !important;
     font-family: FontAwesome !important;
 }
-.homeBannerSection .slick-arrow.slick-prev::before{
-    
+
+.homeBannerSection .slick-arrow.slick-prev::before {
+
     color: #fff !important;
     font-family: FontAwesome !important;
 }
