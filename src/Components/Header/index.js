@@ -9,7 +9,8 @@ import SearchBox from "./SearchBox";
 import Navigation from "./Navigation";
 import { MyContext } from "../../App";
 import { useContext } from "react";
-
+import React from "react";
+import Slider from "react-slick";
 
 const Header = () => {
 
