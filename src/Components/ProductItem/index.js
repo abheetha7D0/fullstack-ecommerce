@@ -1,6 +1,8 @@
 import Button from '@mui/material/Button';
 import { Rating } from '@mui/material';
 import { IoMdArrowForward } from "react-icons/io";
+import { AiOutlineFullscreen } from "react-icons/ai";
+import { FaRegHeart } from "react-icons/fa6";
 
 import bag from "../../assets/products/bag.avif";
 import sunglass1 from "../../assets/products/sunglass-1.avif";
@@ -13,7 +15,12 @@ const ProductItem = ({ product }) => {
                 <img src={bag} alt="" className="w-100" />
                 <span className="badge bg-primary">28%</span>
                 <div className="actions">
-                    
+                    <Button>
+                        <AiOutlineFullscreen style={{fontSize:"20px"}}/>
+                    </Button>
+                    <Button>
+                        <FaRegHeart />
+                    </Button>
                 </div>
             </div>
             <div className="info">

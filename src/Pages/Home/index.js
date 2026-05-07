@@ -74,7 +74,7 @@ const Home = () => {
                                     <SwiperSlide>
                                         <ProductItem />
                                     </SwiperSlide>
-                                                                       
+
                                 </Swiper>
                             </div>
                         </div>
