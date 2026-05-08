@@ -1,7 +1,10 @@
 import HomeBanner from "../../Components/HomeBanner";
 import Button from '@mui/material/Button';
-import { Rating } from '@mui/material';
 import { IoMdArrowForward } from "react-icons/io";
+
+import banner4 from "../../assets/banner/banner-4.png";
+import banner6 from "../../assets/banner/banner-6.png";
+import banner7 from "../../assets/banner/banner-7.png";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -10,28 +13,35 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import ProductItem from "../../Components/ProductItem";
+import HomeCat from "../../Components/HomeCat";
+
+
 
 const Home = () => {
-    var productSliderOption = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-    };
-
+   
     return (
         <>
             <HomeBanner />
+
+            <HomeCat />
+
             <section className="homeProductSection">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
-                            <div className="banner">
-                                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/hand-bag-shop-poster-design-template-08262507a3da751e1886caf03e3090f7_screen.jpg?ts=1737116616" alt="" className="cursor w-100" />
+                            <div className="sticky">
+                                <div className="banner">
+                                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/hand-bag-shop-poster-design-template-08262507a3da751e1886caf03e3090f7_screen.jpg?ts=1737116616" alt="Hand bag banner" className="cursor w-100" />
 
+                                </div>
+                                <div className="banner mt-4">
+                                    <img src={banner4} alt="50% Sale banner" className="cursor w-100" />
+
+                                </div>
                             </div>
+
                         </div>
+
                         <div className="col-md-9 productRow">
                             <div className="d-flex align-items-center">
                                 <div className="info w-75">
@@ -40,7 +50,7 @@ const Home = () => {
                                 </div>
                                 <Button className="viewAllBtn ms-auto">View all<IoMdArrowForward /></Button>
                             </div>
-                            <div className="product_row w-100 mt-4">
+                            <div className="product_row w-100 mt-3">
                                 <Swiper
                                     slidesPerView={4}
                                     spaceBetween={0}
@@ -76,6 +86,32 @@ const Home = () => {
                                     </SwiperSlide>
 
                                 </Swiper>
+                            </div>
+
+                            <div className="d-flex align-items-center mt-5">
+                                <div className="info w-75">
+                                    <h3 className="mb-0 hd">New Products</h3>
+                                    <p className="text-light text-sml mb-0">Discover our latest arrivals</p>
+                                </div>
+                                <Button className="viewAllBtn ms-auto">View all<IoMdArrowForward /></Button>
+                            </div>
+                            <div className="product_row product_row2 w-100 mt-4 d-flex">
+                                <ProductItem />
+                                <ProductItem />
+                                <ProductItem />
+                                <ProductItem />
+                                <ProductItem />
+                                <ProductItem />
+                                <ProductItem />
+                                <ProductItem />
+                            </div>
+                            <div className="d-flex mt-4 mb-5 bannerSec">
+                                <div className="banner">
+                                    <img src={banner6} className="cursor w-100" alt="banner 6"/>
+                                </div>
+                                <div className="banner">
+                                    <img src={banner7} className="cursor w-100" alt="banner 7" />
+                                </div>
                             </div>
                         </div>
                     </div>

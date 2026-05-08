@@ -500,10 +500,11 @@ nav .navPart1 .catWrapper .sideBarNav ul li:hover .subMenu {
     overflow: hidden;
 }
 
-.productRow .hd {
+.hd {
     margin-top: 5px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .viewAllBtn {
@@ -627,12 +628,68 @@ nav .navPart1 .catWrapper .sideBarNav ul li:hover .subMenu {
     border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
-
-
 .Swiper {
     padding-right: 1px !important;
 }
 
 .bg-primary {
     background: #2bbef9 !important;
+}
+
+.homeCategorySection {
+    padding: 35px 0px;
+}
+
+.homeCategorySection .swiper {
+    overflow: inherit !important;
+}
+
+.homeCategorySection .swiper .item {
+    padding: 15px !important;
+    width: 100%;
+    height: auto;
+    background: #c2c5aa !important;
+    border-radius: 10px;
+}
+
+.homeCategorySection .swiper .item img {
+    width: 80%;
+}
+
+.homeCategorySection .swiper-button-prev,
+.homeCategorySection .swiper-button-next {
+    top: -30px !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.homeCategorySection .swiper-button-prev {
+    right: 100px !important;
+    left: inherit !important;
+}
+
+.homeCategorySection .swiper-button-prev::after,
+.homeCategorySection .swiper-button-next::after {
+    font-size: 12px !important;
+}
+
+.product_row2 {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product_row2 .productItem {
+    width: 24% !important;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.bannerSec {
+    gap: 15px;
+}
+
+.sticky {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
 }
