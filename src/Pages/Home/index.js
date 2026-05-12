@@ -1,10 +1,12 @@
 import HomeBanner from "../../Components/HomeBanner";
 import Button from '@mui/material/Button';
 import { IoMdArrowForward } from "react-icons/io";
+import { CiMail } from "react-icons/ci";
 
 import banner4 from "../../assets/banner/banner-4.png";
 import banner6 from "../../assets/banner/banner-6.png";
 import banner7 from "../../assets/banner/banner-7.png";
+import newsLetterImg from "../../assets/banner/Coupon.png";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -18,7 +20,7 @@ import HomeCat from "../../Components/HomeCat";
 
 
 const Home = () => {
-   
+
     return (
         <>
             <HomeBanner />
@@ -100,19 +102,36 @@ const Home = () => {
                                 <ProductItem />
                                 <ProductItem />
                                 <ProductItem />
-                                <ProductItem />
-                                <ProductItem />
-                                <ProductItem />
-                                <ProductItem />
                             </div>
                             <div className="d-flex mt-4 mb-5 bannerSec">
                                 <div className="banner">
-                                    <img src={banner6} className="cursor w-100" alt="banner 6"/>
+                                    <img src={banner6} className="cursor w-100" alt="banner 6" />
                                 </div>
                                 <div className="banner">
                                     <img src={banner7} className="cursor w-100" alt="banner 7" />
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <p className="text-white mb-1">20$ Discount for your first order</p>
+                            <h3 className="text-white">Join our newsletter and get...</h3>
+                            <p className="text-white">Join our email subscription
+                                <br />now to get updates on promotions and coupons.</p>
+                            <form>
+                                <CiMail />
+                                <input type="text" placeholder="Your Email Address"></input>
+                                <Button>Subscribe</Button>
+                            </form>
+                        </div>
+                        <div className="col-md-6">
+                            <img src={newsLetterImg} alt="Coupon image" />
                         </div>
                     </div>
                 </div>

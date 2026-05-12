@@ -102,6 +102,27 @@ const HomeCat = () => {
                         <h6>Watches</h6>
                         </div>
                     </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="item text-center">
+                            <img src={catogory} alt="cat1" />
+                            
+                        <h6>Watches</h6>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="item text-center">
+                            <img src={catogory} alt="cat1" />
+                            
+                        <h6>Watches</h6>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="item text-center">
+                            <img src={catogory} alt="cat1" />
+                            
+                        <h6>Watches</h6>
+                        </div>
+                    </SwiperSlide>
                     
                     
                 </Swiper>
